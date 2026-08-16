@@ -2,142 +2,274 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Servicio de Transporte Privado | Cuba</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    CUBADRIVE | Transporte privado con chófer en Cuba
+  </title>
 
   <meta
     name="description"
-    content="Servicio privado de alquiler de vehículo con chófer en Cuba. Traslados, recorridos privados y atención personalizada."
+    content="Servicio privado de transporte con chófer en Cuba. Traslados al aeropuerto, recorridos, servicio por horas y viajes personalizados."
   >
 
-  <meta name="theme-color" content="#0b5eb7">
+  <meta
+    name="theme-color"
+    content="#0b5eb7"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+
+  <!-- =========================================
+       FONTS
+  ========================================== -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
 
+    /* =========================================
+       VARIABLES
+    ========================================== */
+
     :root {
+
       --blue: #0b5eb7;
+
+      --blue-hover: #0d70d8;
+
       --blue-dark: #063b73;
+
       --blue-deep: #052c56;
+
       --blue-light: #eaf4ff;
-      --blue-soft: #f4f9ff;
+
+      --blue-soft: #f5f9fd;
 
       --white: #ffffff;
-      --black: #102033;
-      --gray: #687386;
-      --gray-light: #e7edf4;
 
-      --shadow: 0 20px 60px rgba(6, 59, 115, .12);
+      --black: #102033;
+
+      --gray: #687386;
+
+      --gray-light: #e2e9f1;
+
+      --green: #25d366;
+
+      --shadow:
+        0 20px 60px rgba(6, 59, 115, .12);
+
     }
+
+
+    /* =========================================
+       RESET
+    ========================================== */
 
     * {
+
       margin: 0;
+
       padding: 0;
+
       box-sizing: border-box;
+
     }
+
 
     html {
+
       scroll-behavior: smooth;
+
     }
+
 
     body {
-      font-family: "DM Sans", sans-serif;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
       color: var(--black);
-      background: var(--white);
+
+      background:
+        var(--white);
+
       line-height: 1.6;
+
       overflow-x: hidden;
+
     }
+
 
     img {
-      width: 100%;
+
       display: block;
+
+      width: 100%;
+
     }
 
+
     a {
-      text-decoration: none;
+
       color: inherit;
+
+      text-decoration: none;
+
     }
+
 
     button,
     input,
     textarea,
     select {
+
       font-family: inherit;
+
     }
+
 
     .container {
-      width: min(1160px, calc(100% - 40px));
-      margin: auto;
+
+      width:
+        min(
+          1160px,
+          calc(100% - 40px)
+        );
+
+      margin:
+        0 auto;
+
     }
 
 
-    /* ==================================================
-       NAVBAR
-    ================================================== */
+    /* =========================================
+       NAVIGATION
+    ========================================== */
 
     header {
+
       position: absolute;
+
       top: 0;
       left: 0;
+
       width: 100%;
+
       z-index: 20;
+
       color: white;
+
     }
 
+
     nav {
+
       height: 85px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
     }
+
 
     .logo {
+
       font-size: 22px;
+
       font-weight: 700;
+
       letter-spacing: 1.5px;
+
     }
+
 
     .logo span {
-      color: #74b9ff;
+
+      color:
+        #74b9ff;
+
     }
 
+
     .nav-links {
+
       display: flex;
+
       align-items: center;
+
       gap: 34px;
 
       list-style: none;
 
       font-size: 14px;
+
     }
+
 
     .nav-links a {
+
       opacity: .92;
-      transition: .25s;
+
+      transition:
+        .25s ease;
+
     }
+
 
     .nav-links a:hover {
-      color: #74b9ff;
+
+      color:
+        #74b9ff;
+
     }
+
 
     .nav-button {
-      padding: 11px 20px;
 
-      border: 1px solid rgba(255,255,255,.45);
+      padding:
+        11px 20px;
 
-      border-radius: 5px;
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          .45
+        );
+
+      border-radius:
+        5px;
+
     }
 
+
     .mobile-menu {
+
       display: none;
 
       font-size: 27px;
@@ -145,987 +277,1831 @@
       cursor: pointer;
 
       position: relative;
+
       z-index: 30;
+
     }
 
 
-    /* ==================================================
+    /* =========================================
        HERO
-    ================================================== */
+    ========================================== */
 
     .hero {
-      min-height: 760px;
-      height: 100vh;
-      max-height: 900px;
 
-      position: relative;
+      min-height:
+        760px;
 
-      display: flex;
-      align-items: center;
+      height:
+        100vh;
 
-      color: white;
+      max-height:
+        900px;
 
-      overflow: hidden;
+      position:
+        relative;
 
-      background: var(--blue-deep);
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      color:
+        white;
+
+      overflow:
+        hidden;
+
+      background:
+        var(--blue-deep);
+
     }
+
 
     .hero-image {
-      position: absolute;
-      inset: 0;
+
+      position:
+        absolute;
+
+      inset:
+        0;
 
       background-image:
+
         linear-gradient(
           90deg,
-          rgba(3, 25, 49, .86) 0%,
-          rgba(3, 25, 49, .62) 45%,
-          rgba(3, 25, 49, .20) 100%
-        ),
-        url("carro.jpg");
+          rgba(
+            3,
+            25,
+            49,
+            .88
+          ) 0%,
 
-      background-size: cover;
-      background-position: center;
+          rgba(
+            3,
+            25,
+            49,
+            .64
+          ) 45%,
+
+          rgba(
+            3,
+            25,
+            49,
+            .18
+          ) 100%
+        ),
+
+        url("carro.webp");
+
+      background-size:
+        cover;
+
+      background-position:
+        center;
+
     }
+
 
     .hero-content {
-      position: relative;
-      z-index: 2;
 
-      max-width: 720px;
+      position:
+        relative;
 
-      padding-top: 70px;
+      z-index:
+        2;
+
+      max-width:
+        720px;
+
+      padding-top:
+        70px;
+
     }
+
 
     .eyebrow {
-      color: #75bdff;
 
-      font-size: 12px;
-      font-weight: 700;
+      color:
+        #74b9ff;
 
-      letter-spacing: 3px;
+      font-size:
+        12px;
 
-      text-transform: uppercase;
+      font-weight:
+        700;
 
-      margin-bottom: 20px;
+      letter-spacing:
+        3px;
+
+      text-transform:
+        uppercase;
+
+      margin-bottom:
+        20px;
+
     }
+
 
     h1 {
-      font-family: "Playfair Display", serif;
 
-      font-size: clamp(48px, 7vw, 82px);
+      font-family:
+        "Playfair Display",
+        serif;
 
-      line-height: 1.02;
+      font-size:
+        clamp(
+          48px,
+          7vw,
+          82px
+        );
 
-      font-weight: 600;
+      line-height:
+        1.02;
 
-      margin-bottom: 25px;
+      font-weight:
+        600;
+
+      margin-bottom:
+        25px;
+
     }
+
 
     h1 span {
-      color: #74b9ff;
+
+      color:
+        #74b9ff;
+
     }
+
 
     .hero-description {
-      max-width: 570px;
 
-      font-size: 18px;
+      max-width:
+        590px;
 
-      line-height: 1.7;
+      font-size:
+        18px;
 
-      color: rgba(255,255,255,.84);
+      line-height:
+        1.7;
 
-      margin-bottom: 35px;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .84
+        );
+
+      margin-bottom:
+        35px;
+
     }
+
 
     .hero-buttons {
-      display: flex;
 
-      gap: 14px;
+      display:
+        flex;
 
-      flex-wrap: wrap;
+      gap:
+        14px;
+
+      flex-wrap:
+        wrap;
+
     }
+
 
     .btn {
-      display: inline-flex;
 
-      justify-content: center;
-      align-items: center;
+      display:
+        inline-flex;
 
-      gap: 9px;
+      justify-content:
+        center;
 
-      min-height: 52px;
+      align-items:
+        center;
 
-      padding: 0 25px;
+      gap:
+        9px;
 
-      border-radius: 5px;
+      min-height:
+        52px;
 
-      border: 1px solid transparent;
+      padding:
+        0 25px;
 
-      font-weight: 600;
+      border-radius:
+        5px;
 
-      font-size: 14px;
+      border:
+        1px solid transparent;
 
-      cursor: pointer;
+      font-weight:
+        600;
 
-      transition: .25s;
+      font-size:
+        14px;
+
+      cursor:
+        pointer;
+
+      transition:
+        .25s ease;
+
     }
+
 
     .btn-primary {
-      background: var(--blue);
 
-      color: white;
+      background:
+        var(--blue);
+
+      color:
+        white;
+
     }
+
 
     .btn-primary:hover {
-      background: #1475d5;
 
-      transform: translateY(-2px);
+      background:
+        var(--blue-hover);
+
+      transform:
+        translateY(-2px);
+
     }
+
 
     .btn-outline {
-      border-color: rgba(255,255,255,.55);
 
-      color: white;
+      border-color:
+        rgba(
+          255,
+          255,
+          255,
+          .55
+        );
+
+      color:
+        white;
+
     }
+
 
     .btn-outline:hover {
-      background: white;
 
-      color: var(--blue-dark);
+      background:
+        white;
+
+      color:
+        var(--blue-dark);
+
     }
+
 
     .hero-bottom {
-      position: absolute;
 
-      bottom: 30px;
+      position:
+        absolute;
 
-      left: 0;
+      bottom:
+        30px;
 
-      width: 100%;
+      left:
+        0;
 
-      z-index: 3;
+      width:
+        100%;
+
+      z-index:
+        3;
+
     }
+
 
     .hero-info {
-      display: flex;
 
-      gap: 35px;
+      display:
+        flex;
 
-      color: rgba(255,255,255,.78);
+      gap:
+        35px;
 
-      font-size: 13px;
+      flex-wrap:
+        wrap;
 
-      flex-wrap: wrap;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .78
+        );
+
+      font-size:
+        13px;
+
     }
+
 
     .hero-info span {
-      display: flex;
 
-      align-items: center;
+      display:
+        flex;
 
-      gap: 8px;
+      align-items:
+        center;
+
+      gap:
+        8px;
+
     }
 
 
-    /* ==================================================
+    /* =========================================
        GENERAL SECTIONS
-    ================================================== */
+    ========================================== */
 
     section {
-      padding: 100px 0;
+
+      padding:
+        100px 0;
+
     }
+
 
     .section-header {
-      max-width: 650px;
 
-      margin-bottom: 55px;
+      max-width:
+        680px;
+
+      margin-bottom:
+        55px;
+
     }
+
 
     .section-label {
-      color: var(--blue);
 
-      font-size: 12px;
+      color:
+        var(--blue);
 
-      font-weight: 700;
+      font-size:
+        12px;
 
-      letter-spacing: 3px;
+      font-weight:
+        700;
 
-      text-transform: uppercase;
+      letter-spacing:
+        3px;
 
-      margin-bottom: 14px;
+      text-transform:
+        uppercase;
+
+      margin-bottom:
+        14px;
+
     }
+
 
     h2 {
-      font-family: "Playfair Display", serif;
 
-      font-size: clamp(38px, 5vw, 55px);
+      font-family:
+        "Playfair Display",
+        serif;
 
-      line-height: 1.1;
+      font-size:
+        clamp(
+          38px,
+          5vw,
+          55px
+        );
 
-      font-weight: 600;
+      line-height:
+        1.1;
 
-      margin-bottom: 18px;
+      font-weight:
+        600;
+
+      margin-bottom:
+        18px;
+
     }
+
 
     .section-description {
-      color: var(--gray);
 
-      font-size: 16px;
+      color:
+        var(--gray);
 
-      max-width: 600px;
+      font-size:
+        16px;
+
+      max-width:
+        620px;
+
     }
 
 
-    /* ==================================================
+    /* =========================================
        SERVICES
-    ================================================== */
+    ========================================== */
 
     .services {
-      background: var(--blue-soft);
+
+      background:
+        var(--blue-soft);
+
     }
+
 
     .services-grid {
-      display: grid;
 
-      grid-template-columns: repeat(4, 1fr);
+      display:
+        grid;
 
-      gap: 1px;
+      grid-template-columns:
+        repeat(
+          4,
+          1fr
+        );
 
-      background: var(--gray-light);
+      gap:
+        1px;
 
-      border: 1px solid var(--gray-light);
+      background:
+        var(--gray-light);
+
+      border:
+        1px solid
+        var(--gray-light);
+
     }
+
 
     .service-card {
-      background: var(--blue-soft);
 
-      padding: 38px 28px;
+      background:
+        var(--blue-soft);
 
-      min-height: 260px;
+      padding:
+        38px 28px;
 
-      transition: .3s;
+      min-height:
+        275px;
+
+      transition:
+        .3s ease;
+
     }
+
 
     .service-card:hover {
-      background: white;
 
-      transform: translateY(-5px);
+      background:
+        white;
 
-      box-shadow: var(--shadow);
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        var(--shadow);
+
     }
+
 
     .service-number {
-      font-size: 12px;
 
-      color: var(--blue);
+      font-size:
+        12px;
 
-      font-weight: 700;
+      color:
+        var(--blue);
 
-      margin-bottom: 40px;
+      font-weight:
+        700;
+
+      margin-bottom:
+        35px;
+
     }
+
 
     .service-icon {
-      width: 46px;
-      height: 46px;
 
-      display: flex;
+      width:
+        46px;
 
-      align-items: center;
-      justify-content: center;
+      height:
+        46px;
 
-      background: var(--blue-light);
+      display:
+        flex;
 
-      color: var(--blue);
+      align-items:
+        center;
 
-      border-radius: 50%;
+      justify-content:
+        center;
 
-      font-size: 20px;
+      background:
+        var(--blue-light);
 
-      margin-bottom: 18px;
+      color:
+        var(--blue);
+
+      border-radius:
+        50%;
+
+      font-size:
+        20px;
+
+      margin-bottom:
+        18px;
+
     }
+
 
     .service-card h3 {
-      font-size: 19px;
 
-      margin-bottom: 10px;
+      font-size:
+        19px;
+
+      margin-bottom:
+        10px;
+
     }
+
 
     .service-card p {
-      color: var(--gray);
 
-      font-size: 14px;
+      color:
+        var(--gray);
 
-      line-height: 1.7;
+      font-size:
+        14px;
+
+      line-height:
+        1.7;
+
     }
 
 
-    /* ==================================================
+    /* =========================================
        VEHICLE
-    ================================================== */
+    ========================================== */
 
     .vehicle {
-      background: white;
+
+      background:
+        white;
+
     }
+
 
     .vehicle-grid {
-      display: grid;
 
-      grid-template-columns: 1.15fr .85fr;
+      display:
+        grid;
 
-      gap: 70px;
+      grid-template-columns:
+        1.15fr .85fr;
 
-      align-items: center;
+      gap:
+        70px;
+
+      align-items:
+        center;
+
     }
+
 
     .vehicle-image {
-      position: relative;
 
-      overflow: hidden;
+      position:
+        relative;
 
-      border-radius: 5px;
+      overflow:
+        hidden;
+
+      border-radius:
+        5px;
+
     }
+
 
     .vehicle-image img {
-      height: 520px;
 
-      object-fit: cover;
+      height:
+        520px;
 
-      transition: transform .5s;
+      object-fit:
+        cover;
+
+      transition:
+        transform .5s ease;
+
     }
+
 
     .vehicle-image:hover img {
-      transform: scale(1.03);
+
+      transform:
+        scale(1.03);
+
     }
+
 
     .vehicle-badge {
-      position: absolute;
 
-      left: 20px;
-      bottom: 20px;
+      position:
+        absolute;
 
-      background: rgba(5, 44, 86, .93);
+      left:
+        20px;
 
-      color: white;
+      bottom:
+        20px;
 
-      padding: 12px 18px;
+      background:
+        rgba(
+          5,
+          44,
+          86,
+          .94
+        );
 
-      font-size: 12px;
+      color:
+        white;
 
-      letter-spacing: 1px;
+      padding:
+        12px 18px;
+
+      font-size:
+        12px;
+
+      letter-spacing:
+        1px;
+
     }
+
 
     .vehicle-content h2 {
-      margin-bottom: 20px;
+
+      margin-bottom:
+        20px;
+
     }
+
 
     .vehicle-content > p {
-      color: var(--gray);
 
-      margin-bottom: 30px;
+      color:
+        var(--gray);
+
+      margin-bottom:
+        30px;
+
     }
+
 
     .features {
-      display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      display:
+        grid;
 
-      border-top: 1px solid var(--gray-light);
+      grid-template-columns:
+        1fr 1fr;
 
-      border-bottom: 1px solid var(--gray-light);
+      border-top:
+        1px solid
+        var(--gray-light);
 
-      margin-bottom: 30px;
+      border-bottom:
+        1px solid
+        var(--gray-light);
+
+      margin-bottom:
+        30px;
+
     }
+
 
     .feature {
-      padding: 18px 0;
 
-      border-bottom: 1px solid var(--gray-light);
+      padding:
+        18px 0;
 
-      font-size: 14px;
+      border-bottom:
+        1px solid
+        var(--gray-light);
+
+      font-size:
+        14px;
+
     }
+
 
     .feature:nth-child(odd) {
-      margin-right: 15px;
+
+      margin-right:
+        15px;
+
     }
+
 
     .feature strong {
-      display: block;
 
-      font-size: 12px;
+      display:
+        block;
 
-      color: var(--gray);
+      font-size:
+        12px;
 
-      font-weight: 400;
+      color:
+        var(--gray);
 
-      margin-bottom: 3px;
+      font-weight:
+        400;
+
+      margin-bottom:
+        3px;
+
     }
 
 
-    /* ==================================================
+    /* =========================================
        EXPERIENCE
-    ================================================== */
+    ========================================== */
 
     .experience {
-      background: var(--blue-deep);
 
-      color: white;
+      background:
+        var(--blue-deep);
+
+      color:
+        white;
+
     }
+
 
     .experience .section-label {
-      color: #74b9ff;
+
+      color:
+        #74b9ff;
+
     }
+
 
     .experience-grid {
-      display: grid;
 
-      grid-template-columns: .9fr 1.1fr;
+      display:
+        grid;
 
-      gap: 100px;
+      grid-template-columns:
+        .9fr 1.1fr;
 
-      align-items: center;
+      gap:
+        100px;
+
+      align-items:
+        center;
+
     }
+
 
     .experience .section-description {
-      color: rgba(255,255,255,.62);
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .62
+        );
+
     }
+
 
     .experience-list {
-      display: grid;
 
-      gap: 0;
+      display:
+        grid;
+
+      gap:
+        0;
+
     }
+
 
     .experience-item {
-      display: grid;
 
-      grid-template-columns: 60px 1fr;
+      display:
+        grid;
 
-      gap: 25px;
+      grid-template-columns:
+        60px 1fr;
 
-      padding: 28px 0;
+      gap:
+        25px;
 
-      border-bottom: 1px solid rgba(255,255,255,.12);
+      padding:
+        28px 0;
+
+      border-bottom:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .12
+        );
+
     }
+
 
     .experience-item:first-child {
-      border-top: 1px solid rgba(255,255,255,.12);
+
+      border-top:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .12
+        );
+
     }
+
 
     .experience-number {
-      color: #74b9ff;
 
-      font-family: "Playfair Display", serif;
+      color:
+        #74b9ff;
 
-      font-size: 25px;
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        25px;
+
     }
+
 
     .experience-item h3 {
-      margin-bottom: 7px;
 
-      font-size: 18px;
+      margin-bottom:
+        7px;
+
+      font-size:
+        18px;
+
     }
+
 
     .experience-item p {
-      color: rgba(255,255,255,.55);
 
-      font-size: 14px;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .55
+        );
+
+      font-size:
+        14px;
+
     }
 
 
-    /* ==================================================
+    /* =========================================
        RESERVATION
-    ================================================== */
+    ========================================== */
 
     .reservation {
-      background: var(--blue-soft);
+
+      background:
+        var(--blue-soft);
+
     }
+
 
     .reservation-wrapper {
-      display: grid;
 
-      grid-template-columns: .8fr 1.2fr;
+      display:
+        grid;
 
-      background: white;
+      grid-template-columns:
+        .8fr 1.2fr;
 
-      box-shadow: var(--shadow);
+      background:
+        white;
+
+      box-shadow:
+        var(--shadow);
+
     }
+
 
     .reservation-info {
-      background: var(--blue-dark);
 
-      color: white;
+      background:
+        var(--blue-dark);
 
-      padding: 55px;
+      color:
+        white;
+
+      padding:
+        55px;
+
     }
+
 
     .reservation-info .section-label {
-      color: #74b9ff;
+
+      color:
+        #74b9ff;
+
     }
+
 
     .reservation-info h2 {
-      font-size: 42px;
+
+      font-size:
+        42px;
+
     }
+
 
     .reservation-info p {
-      color: rgba(255,255,255,.68);
 
-      margin-bottom: 40px;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .68
+        );
+
+      margin-bottom:
+        40px;
+
     }
+
 
     .contact-item {
-      display: flex;
 
-      gap: 15px;
+      display:
+        flex;
 
-      margin-bottom: 25px;
+      gap:
+        15px;
+
+      margin-bottom:
+        25px;
+
     }
+
 
     .contact-icon {
-      width: 38px;
-      height: 38px;
 
-      border: 1px solid rgba(255,255,255,.2);
+      width:
+        38px;
 
-      display: flex;
+      height:
+        38px;
 
-      align-items: center;
-      justify-content: center;
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .2
+        );
 
-      flex-shrink: 0;
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      flex-shrink:
+        0;
+
     }
+
 
     .contact-item small {
-      color: rgba(255,255,255,.45);
 
-      display: block;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .45
+        );
 
-      font-size: 11px;
+      display:
+        block;
 
-      margin-bottom: 2px;
+      font-size:
+        11px;
+
+      margin-bottom:
+        2px;
+
     }
+
 
     .reservation-form {
-      padding: 55px;
+
+      padding:
+        55px;
+
     }
+
+
+    .required-note {
+
+      margin-bottom:
+        20px;
+
+      color:
+        var(--gray);
+
+      font-size:
+        12px;
+
+    }
+
 
     .form-grid {
-      display: grid;
 
-      grid-template-columns: 1fr 1fr;
+      display:
+        grid;
 
-      gap: 20px;
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:
+        20px;
+
     }
+
 
     .form-group {
-      display: flex;
 
-      flex-direction: column;
+      display:
+        flex;
 
-      gap: 7px;
+      flex-direction:
+        column;
+
+      gap:
+        7px;
+
     }
+
 
     .form-group.full {
-      grid-column: 1 / -1;
+
+      grid-column:
+        1 / -1;
+
     }
+
 
     label {
-      font-size: 12px;
 
-      font-weight: 600;
+      font-size:
+        12px;
 
-      color: #555;
+      font-weight:
+        600;
+
+      color:
+        #555;
+
     }
+
 
     input,
     select,
     textarea {
-      width: 100%;
 
-      border: 1px solid #d9e1ea;
+      width:
+        100%;
 
-      padding: 14px 15px;
+      border:
+        1px solid
+        #d9e1ea;
 
-      font-size: 14px;
+      padding:
+        14px 15px;
 
-      outline: none;
+      font-size:
+        14px;
 
-      background: white;
+      outline:
+        none;
 
-      color: var(--black);
+      background:
+        white;
 
-      transition: .2s;
+      color:
+        var(--black);
 
-      border-radius: 3px;
+      transition:
+        .2s;
+
+      border-radius:
+        3px;
+
     }
+
 
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: var(--blue);
+
+      border-color:
+        var(--blue);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(
+          11,
+          94,
+          183,
+          .08
+        );
+
     }
+
 
     textarea {
-      min-height: 100px;
 
-      resize: vertical;
+      min-height:
+        100px;
+
+      resize:
+        vertical;
+
     }
+
 
     .form-submit {
-      margin-top: 25px;
+
+      margin-top:
+        25px;
+
     }
+
 
     .submit-button {
-      width: 100%;
+
+      width:
+        100%;
+
     }
+
 
     .submit-button:disabled {
-      background: #b8c4d1;
-
-      color: #edf1f5;
-
-      cursor: not-allowed;
-
-      transform: none;
-
-      opacity: .8;
-    }
-
-    .form-note {
-      margin-top: 12px;
-
-      color: #888;
-
-      font-size: 11px;
-
-      line-height: 1.5;
-    }
-
-    .required-note {
-      margin-bottom: 20px;
-
-      color: var(--gray);
-
-      font-size: 12px;
-    }
-
-    .error-message {
-      display: none;
-
-      margin-top: 12px;
-
-      padding: 11px 14px;
-
-      background: #fff2f2;
-
-      border: 1px solid #ffd1d1;
-
-      color: #b42318;
-
-      font-size: 12px;
-
-      border-radius: 3px;
-    }
-
-    .error-message.active {
-      display: block;
-    }
-
-
-    /* ==================================================
-       CTA
-    ================================================== */
-
-    .cta {
-      padding: 85px 0;
 
       background:
-        linear-gradient(
-          rgba(5, 44, 86, .91),
-          rgba(5, 44, 86, .91)
-        ),
-        url("carro.jpg");
+        #b8c4d1;
 
-      background-size: cover;
+      color:
+        #edf1f5;
 
-      background-position: center;
+      cursor:
+        not-allowed;
 
-      color: white;
+      transform:
+        none;
 
-      text-align: center;
+      opacity:
+        .8;
+
     }
+
+
+    .form-note {
+
+      margin-top:
+        12px;
+
+      color:
+        #888;
+
+      font-size:
+        11px;
+
+      line-height:
+        1.5;
+
+    }
+
+
+    .error-message {
+
+      display:
+        none;
+
+      margin-top:
+        15px;
+
+      padding:
+        11px 14px;
+
+      background:
+        #fff2f2;
+
+      border:
+        1px solid
+        #ffd1d1;
+
+      color:
+        #b42318;
+
+      font-size:
+        12px;
+
+      border-radius:
+        3px;
+
+    }
+
+
+    .error-message.active {
+
+      display:
+        block;
+
+    }
+
+
+    /* =========================================
+       CTA
+    ========================================== */
+
+    .cta {
+
+      padding:
+        85px 0;
+
+      background:
+
+        linear-gradient(
+          rgba(
+            5,
+            44,
+            86,
+            .92
+          ),
+          rgba(
+            5,
+            44,
+            86,
+            .92
+          )
+        ),
+
+        url("carro.webp");
+
+      background-size:
+        cover;
+
+      background-position:
+        center;
+
+      color:
+        white;
+
+      text-align:
+        center;
+
+    }
+
 
     .cta .section-label {
-      color: #74b9ff;
+
+      color:
+        #74b9ff;
+
     }
+
 
     .cta-content {
-      max-width: 720px;
 
-      margin: auto;
+      max-width:
+        720px;
+
+      margin:
+        auto;
+
     }
+
 
     .cta h2 {
-      font-size: clamp(40px, 6vw, 62px);
+
+      font-size:
+        clamp(
+          40px,
+          6vw,
+          62px
+        );
+
     }
+
 
     .cta p {
-      color: rgba(255,255,255,.68);
 
-      margin-bottom: 30px;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .68
+        );
+
+      margin-bottom:
+        30px;
+
     }
 
 
-    /* ==================================================
+    /* =========================================
        FOOTER
-    ================================================== */
+    ========================================== */
 
     footer {
-      background: #031d38;
 
-      color: white;
+      background:
+        #031d38;
 
-      padding: 45px 0 25px;
+      color:
+        white;
+
+      padding:
+        45px 0 25px;
+
     }
+
 
     .footer-top {
-      display: flex;
 
-      justify-content: space-between;
+      display:
+        flex;
 
-      align-items: center;
+      justify-content:
+        space-between;
 
-      padding-bottom: 35px;
+      align-items:
+        center;
 
-      border-bottom: 1px solid rgba(255,255,255,.1);
+      padding-bottom:
+        35px;
+
+      border-bottom:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .1
+        );
+
     }
+
 
     .footer-brand {
-      font-size: 20px;
 
-      font-weight: 700;
+      font-size:
+        20px;
 
-      letter-spacing: 1px;
+      font-weight:
+        700;
+
+      letter-spacing:
+        1px;
+
     }
+
 
     .footer-brand span {
-      color: #74b9ff;
+
+      color:
+        #74b9ff;
+
     }
+
 
     .footer-links {
-      display: flex;
 
-      gap: 25px;
+      display:
+        flex;
 
-      color: rgba(255,255,255,.6);
+      gap:
+        25px;
 
-      font-size: 13px;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .6
+        );
+
+      font-size:
+        13px;
+
     }
+
 
     .footer-links a:hover {
-      color: white;
+
+      color:
+        white;
+
     }
+
 
     .footer-bottom {
-      padding-top: 25px;
 
-      display: flex;
+      padding-top:
+        25px;
 
-      justify-content: space-between;
+      display:
+        flex;
 
-      color: rgba(255,255,255,.35);
+      justify-content:
+        space-between;
 
-      font-size: 11px;
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .35
+        );
+
+      font-size:
+        11px;
+
     }
 
 
-    /* ==================================================
-       WHATSAPP FLOAT
-    ================================================== */
+    /* =========================================
+       WHATSAPP
+    ========================================== */
 
     .whatsapp {
-      position: fixed;
 
-      right: 20px;
+      position:
+        fixed;
 
-      bottom: 20px;
+      right:
+        20px;
 
-      width: 58px;
-      height: 58px;
+      bottom:
+        20px;
 
-      border-radius: 50%;
+      width:
+        58px;
 
-      background: #25D366;
+      height:
+        58px;
 
-      color: white;
+      border-radius:
+        50%;
 
-      display: flex;
+      background:
+        var(--green);
 
-      align-items: center;
-      justify-content: center;
+      color:
+        white;
 
-      font-size: 26px;
+      display:
+        flex;
 
-      z-index: 100;
+      align-items:
+        center;
 
-      box-shadow: 0 8px 25px rgba(0,0,0,.25);
+      justify-content:
+        center;
 
-      transition: .25s;
+      font-size:
+        26px;
+
+      z-index:
+        100;
+
+      box-shadow:
+        0 8px 25px
+        rgba(
+          0,
+          0,
+          0,
+          .25
+        );
+
+      transition:
+        .25s;
+
     }
+
 
     .whatsapp:hover {
-      transform: scale(1.08);
+
+      transform:
+        scale(1.08);
+
     }
 
 
-    /* ==================================================
+    /* =========================================
        MOBILE
-    ================================================== */
+    ========================================== */
 
     @media (max-width: 900px) {
 
       .nav-links {
-        position: fixed;
 
-        top: 0;
-        right: -100%;
+        position:
+          fixed;
 
-        width: 80%;
+        top:
+          0;
 
-        height: 100vh;
+        right:
+          -100%;
 
-        background: var(--blue-deep);
+        width:
+          80%;
 
-        flex-direction: column;
+        height:
+          100vh;
 
-        justify-content: center;
+        background:
+          var(--blue-deep);
 
-        transition: .3s;
+        flex-direction:
+          column;
+
+        justify-content:
+          center;
+
+        transition:
+          .3s;
+
       }
+
 
       .nav-links.active {
-        right: 0;
+
+        right:
+          0;
+
       }
+
 
       .mobile-menu {
-        display: block;
+
+        display:
+          block;
+
       }
 
+
       .services-grid {
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-columns:
+          1fr 1fr;
+
       }
+
 
       .vehicle-grid,
       .experience-grid,
       .reservation-wrapper {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
 
+
       .experience-grid {
-        gap: 50px;
+
+        gap:
+          50px;
+
       }
+
 
       .reservation-info,
       .reservation-form {
-        padding: 40px 30px;
+
+        padding:
+          40px 30px;
+
       }
+
     }
 
 
     @media (max-width: 600px) {
 
       .container {
-        width: min(100% - 30px, 1160px);
+
+        width:
+          min(
+            100% - 30px,
+            1160px
+          );
+
       }
+
 
       .hero {
-        min-height: 720px;
+
+        min-height:
+          720px;
+
       }
+
 
       .hero-content {
-        padding-top: 80px;
+
+        padding-top:
+          80px;
+
       }
+
 
       h1 {
-        font-size: 48px;
+
+        font-size:
+          48px;
+
       }
+
 
       .hero-description {
-        font-size: 16px;
+
+        font-size:
+          16px;
+
       }
+
 
       .hero-info {
-        gap: 15px;
+
+        gap:
+          15px;
+
       }
+
 
       section {
-        padding: 75px 0;
+
+        padding:
+          75px 0;
+
       }
+
 
       .services-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
 
       .service-card {
-        min-height: auto;
+
+        min-height:
+          auto;
+
       }
+
 
       .vehicle-image img {
-        height: 350px;
+
+        height:
+          350px;
+
       }
+
 
       .features {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
 
       .feature:nth-child(odd) {
-        margin-right: 0;
+
+        margin-right:
+          0;
+
       }
+
 
       .form-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
 
+
       .form-group.full {
-        grid-column: auto;
+
+        grid-column:
+          auto;
+
       }
+
 
       .reservation-info,
       .reservation-form {
-        padding: 35px 22px;
+
+        padding:
+          35px 22px;
+
       }
+
 
       .footer-top,
       .footer-bottom {
-        flex-direction: column;
 
-        gap: 20px;
+        flex-direction:
+          column;
 
-        align-items: flex-start;
+        gap:
+          20px;
+
+        align-items:
+          flex-start;
+
       }
+
 
       .footer-links {
-        flex-wrap: wrap;
+
+        flex-wrap:
+          wrap;
+
       }
+
 
       .whatsapp {
-        width: 54px;
-        height: 54px;
 
-        right: 16px;
-        bottom: 16px;
+        width:
+          54px;
+
+        height:
+          54px;
+
+        right:
+          16px;
+
+        bottom:
+          16px;
+
       }
+
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- ==================================================
-       NAVBAR
-  ================================================== -->
+  <!-- =========================================
+       HEADER
+  ========================================== -->
 
   <header>
 
@@ -1133,13 +2109,19 @@
 
       <nav>
 
-        <!-- EDITAR: nombre del servicio -->
-        <a href="#" class="logo">
+
+        <a
+          href="#"
+          class="logo"
+        >
           CUBA<span>DRIVE</span>
         </a>
 
 
-        <ul class="nav-links" id="navLinks">
+        <ul
+          class="nav-links"
+          id="navLinks"
+        >
 
           <li>
             <a href="#servicios">
@@ -1160,7 +2142,10 @@
           </li>
 
           <li>
-            <a href="#reserva" class="nav-button">
+            <a
+              href="#reserva"
+              class="nav-button"
+            >
               Reservar
             </a>
           </li>
@@ -1176,6 +2161,7 @@
           ☰
         </div>
 
+
       </nav>
 
     </div>
@@ -1184,11 +2170,16 @@
 
 
 
-  <!-- ==================================================
-       HERO
-  ================================================== -->
+  <!-- =========================================
+       MAIN
+  ========================================== -->
 
   <main>
+
+
+    <!-- =======================================
+         HERO
+    ======================================== -->
 
     <section class="hero">
 
@@ -1198,6 +2189,7 @@
       <div class="container">
 
         <div class="hero-content">
+
 
           <div class="eyebrow">
             Transporte privado · Cuba
@@ -1211,13 +2203,15 @@
 
 
           <p class="hero-description">
-            Alquiler de vehículo con chófer para que recorras Cuba
-            con comodidad, seguridad y la tranquilidad de tener
-            tu transporte organizado desde el primer momento.
+            Tú eliges el destino. Nosotros nos encargamos
+            del camino. Servicio de transporte privado con
+            chófer para moverte por Cuba de forma cómoda,
+            puntual y sin complicaciones.
           </p>
 
 
           <div class="hero-buttons">
+
 
             <a
               href="#reserva"
@@ -1233,8 +2227,9 @@
               rel="noopener"
               class="btn btn-outline"
             >
-              WhatsApp
+              Hablar por WhatsApp
             </a>
+
 
           </div>
 
@@ -1254,11 +2249,11 @@
             </span>
 
             <span>
-              ✓ Atención personalizada
+              ✓ Reserva previa
             </span>
 
             <span>
-              ✓ Servicio privado
+              ✓ Atención directa
             </span>
 
           </div>
@@ -1271,9 +2266,9 @@
 
 
 
-    <!-- ==================================================
-         SERVICIOS
-    ================================================== -->
+    <!-- =======================================
+         SERVICES
+    ======================================== -->
 
     <section
       class="services"
@@ -1286,18 +2281,19 @@
         <div class="section-header">
 
           <div class="section-label">
-            Nuestros servicios
+            Servicios
           </div>
 
 
           <h2>
-            Tu viaje comienza desde que sales de casa.
+            El transporte que se adapta a tu viaje.
           </h2>
 
 
           <p class="section-description">
-            Nos encargamos del transporte para que tú puedas
-            concentrarte en disfrutar de tu estancia.
+            Desde una recogida en el aeropuerto hasta un
+            recorrido completo. Cuéntanos qué necesitas
+            y coordinamos el servicio contigo.
           </p>
 
         </div>
@@ -1313,17 +2309,20 @@
               01
             </div>
 
+
             <div class="service-icon">
               ✈
             </div>
+
 
             <h3>
               Traslados al aeropuerto
             </h3>
 
+
             <p>
-              Te recogemos en el aeropuerto y te llevamos
-              directamente a tu destino, sin complicaciones.
+              Llegas, nos encontramos contigo y te llevamos
+              directamente hasta tu alojamiento o destino.
             </p>
 
           </article>
@@ -1336,17 +2335,20 @@
               02
             </div>
 
+
             <div class="service-icon">
-              ◇
+              ◷
             </div>
+
 
             <h3>
               Servicio por horas
             </h3>
 
+
             <p>
-              Disfruta del vehículo con chófer durante el tiempo
-              que necesites para tus actividades.
+              Ideal para días con varias paradas, reuniones,
+              gestiones o planes que requieren mayor flexibilidad.
             </p>
 
           </article>
@@ -1359,17 +2361,20 @@
               03
             </div>
 
+
             <div class="service-icon">
-              ⌂
+              ◆
             </div>
+
 
             <h3>
               Recorridos privados
             </h3>
 
+
             <p>
-              Explora La Habana y otros destinos cómodamente,
-              con un servicio adaptado a tu itinerario.
+              Descubre La Habana y otros destinos a tu ritmo,
+              sin depender de horarios ni rutas compartidas.
             </p>
 
           </article>
@@ -1382,17 +2387,20 @@
               04
             </div>
 
+
             <div class="service-icon">
               ★
             </div>
 
+
             <h3>
-              Servicio VIP
+              Servicio especial
             </h3>
 
+
             <p>
-              Una experiencia exclusiva para quienes buscan
-              comodidad, privacidad y atención personalizada.
+              Para ocasiones en las que buscas una atención
+              más cuidada y una experiencia de transporte exclusiva.
             </p>
 
           </article>
@@ -1406,9 +2414,9 @@
 
 
 
-    <!-- ==================================================
-         VEHÍCULO
-    ================================================== -->
+    <!-- =======================================
+         VEHICLE
+    ======================================== -->
 
     <section
       class="vehicle"
@@ -1424,8 +2432,10 @@
           <div class="vehicle-image">
 
             <img
-              src="carro.jpg"
-              alt="Vehículo privado con chófer"
+              src="carro.webp"
+              alt="Vehículo privado disponible con chófer"
+              loading="lazy"
+              decoding="async"
             >
 
 
@@ -1439,21 +2449,22 @@
 
           <div class="vehicle-content">
 
+
             <div class="section-label">
               El vehículo
             </div>
 
 
             <h2>
-              Viaja con espacio. Viaja con comodidad.
+              Un viaje cómodo empieza con una buena elección.
             </h2>
 
 
             <p>
-              Un vehículo preparado para ofrecerte una experiencia
-              cómoda y segura durante tus desplazamientos.
-              Ideal para disfrutar del viaje sin preocuparte
-              por la conducción.
+              Nuestro vehículo está preparado para acompañarte
+              durante tus desplazamientos, con un servicio pensado
+              para que puedas relajarte y disfrutar del recorrido
+              mientras nosotros nos ocupamos de conducir.
             </p>
 
 
@@ -1475,21 +2486,10 @@
               <div class="feature">
 
                 <strong>
-                  CHÓFER
+                  CONDUCCIÓN
                 </strong>
 
                 Profesional
-
-              </div>
-
-
-              <div class="feature">
-
-                <strong>
-                  DESTINOS
-                </strong>
-
-                Cuba
 
               </div>
 
@@ -1508,10 +2508,10 @@
               <div class="feature">
 
                 <strong>
-                  ATENCIÓN
+                  DESTINOS
                 </strong>
 
-                Personalizada
+                Cuba
 
               </div>
 
@@ -1519,10 +2519,21 @@
               <div class="feature">
 
                 <strong>
-                  COMODIDAD
+                  ATENCIÓN
                 </strong>
 
-                Garantizada
+                Directa
+
+              </div>
+
+
+              <div class="feature">
+
+                <strong>
+                  EXPERIENCIA
+                </strong>
+
+                Personalizada
 
               </div>
 
@@ -1535,11 +2546,11 @@
               href="#reserva"
               class="btn btn-primary"
             >
-              Solicitar disponibilidad →
+              Consultar disponibilidad →
             </a>
 
-          </div>
 
+          </div>
 
         </div>
 
@@ -1549,9 +2560,9 @@
 
 
 
-    <!-- ==================================================
-         EXPERIENCIA
-    ================================================== -->
+    <!-- =======================================
+         EXPERIENCE
+    ======================================== -->
 
     <section
       class="experience"
@@ -1566,22 +2577,24 @@
 
           <div>
 
+
             <div class="section-label">
-              Nuestra diferencia
+              Cómo funciona
             </div>
 
 
             <h2>
-              Menos preocupaciones.<br>
-              Más tiempo para disfrutar.
+              Tú haces los planes.<br>
+              Nosotros ponemos el camino.
             </h2>
 
 
             <p class="section-description">
-              No se trata solamente de llevarte de un punto
-              a otro. Queremos que todo el proceso sea sencillo,
-              puntual y cómodo.
+              Queremos que reservar tu transporte sea tan sencillo
+              como enviar un mensaje. Sin procesos complicados
+              ni formularios interminables.
             </p>
+
 
           </div>
 
@@ -1600,13 +2613,13 @@
               <div>
 
                 <h3>
-                  Reserva sencilla
+                  Cuéntanos tu plan
                 </h3>
 
+
                 <p>
-                  Nos contactas, nos dices cuándo y dónde
-                  necesitas el servicio y coordinamos todos
-                  los detalles contigo.
+                  Indica la fecha, hora, recogida, destino y
+                  cualquier detalle que debamos tener en cuenta.
                 </p>
 
               </div>
@@ -1625,13 +2638,13 @@
               <div>
 
                 <h3>
-                  Puntualidad
+                  Confirmamos contigo
                 </h3>
 
+
                 <p>
-                  Coordinamos previamente la hora y el lugar
-                  para que tu transporte esté listo cuando
-                  lo necesites.
+                  Revisamos la solicitud y te informamos sobre
+                  disponibilidad y precio del servicio.
                 </p>
 
               </div>
@@ -1650,13 +2663,13 @@
               <div>
 
                 <h3>
-                  Atención personalizada
+                  Coordinamos los detalles
                 </h3>
 
+
                 <p>
-                  Adaptamos el servicio a las necesidades
-                  de tu viaje y te acompañamos durante
-                  el proceso de reserva.
+                  Dejamos definido el punto de encuentro y
+                  el horario para que todo esté claro.
                 </p>
 
               </div>
@@ -1675,12 +2688,13 @@
               <div>
 
                 <h3>
-                  Comodidad durante el viaje
+                  Disfrutas el trayecto
                 </h3>
 
+
                 <p>
-                  Tú disfrutas del trayecto mientras nosotros
-                  nos encargamos de conducir.
+                  Tú te ocupas de disfrutar el viaje. Nosotros
+                  nos encargamos de llevarte hasta donde necesitas.
                 </p>
 
               </div>
@@ -1698,9 +2712,9 @@
 
 
 
-    <!-- ==================================================
-         RESERVA
-    ================================================== -->
+    <!-- =======================================
+         RESERVATION
+    ======================================== -->
 
     <section
       class="reservation"
@@ -1713,9 +2727,8 @@
         <div class="reservation-wrapper">
 
 
-          <!-- CONTACTO -->
-
           <div class="reservation-info">
+
 
             <div class="section-label">
               Solicitud de viaje
@@ -1723,14 +2736,14 @@
 
 
             <h2>
-              Planea tu próximo viaje.
+              Cuéntanos dónde quieres ir.
             </h2>
 
 
             <p>
-              Completa los datos de tu viaje. Cuando estén
-              todos los campos necesarios, podrás enviar
-              la solicitud directamente por WhatsApp.
+              Completa los datos de tu viaje y envía la solicitud.
+              Recibirás nuestra respuesta directamente por WhatsApp
+              para confirmar disponibilidad y precio.
             </p>
 
 
@@ -1796,16 +2809,16 @@
 
             </div>
 
+
           </div>
 
 
 
-          <!-- FORMULARIO -->
-
           <div class="reservation-form">
 
+
             <div class="required-note">
-              Los campos marcados con * son obligatorios.
+              Completa todos los campos marcados con *.
             </div>
 
 
@@ -1818,18 +2831,16 @@
               <div class="form-grid">
 
 
-                <!-- NOMBRE -->
-
                 <div class="form-group">
 
                   <label for="name">
                     Nombre *
                   </label>
 
+
                   <input
                     type="text"
                     id="name"
-                    name="name"
                     placeholder="Tu nombre"
                     autocomplete="name"
                     required
@@ -1839,18 +2850,16 @@
 
 
 
-                <!-- WHATSAPP -->
-
                 <div class="form-group">
 
                   <label for="phone">
                     WhatsApp *
                   </label>
 
+
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
                     placeholder="+53..."
                     autocomplete="tel"
                     required
@@ -1860,26 +2869,22 @@
 
 
 
-                <!-- FECHA -->
-
                 <div class="form-group">
 
                   <label for="date">
                     Fecha del viaje *
                   </label>
 
+
                   <input
                     type="date"
                     id="date"
-                    name="date"
                     required
                   >
 
                 </div>
 
 
-
-                <!-- HORA -->
 
                 <div class="form-group">
 
@@ -1887,10 +2892,10 @@
                     Hora aproximada *
                   </label>
 
+
                   <input
                     type="time"
                     id="time"
-                    name="time"
                     required
                   >
 
@@ -1898,17 +2903,15 @@
 
 
 
-                <!-- SERVICIO -->
-
                 <div class="form-group">
 
                   <label for="service">
                     Tipo de servicio *
                   </label>
 
+
                   <select
                     id="service"
-                    name="service"
                     required
                   >
 
@@ -1920,21 +2923,26 @@
                       Selecciona una opción
                     </option>
 
+
                     <option value="Traslado al aeropuerto">
                       Traslado al aeropuerto
                     </option>
+
 
                     <option value="Servicio por horas">
                       Servicio por horas
                     </option>
 
+
                     <option value="Recorrido privado">
                       Recorrido privado
                     </option>
 
-                    <option value="Servicio VIP">
-                      Servicio VIP
+
+                    <option value="Servicio especial">
+                      Servicio especial
                     </option>
+
 
                     <option value="Otro">
                       Otro
@@ -1946,17 +2954,15 @@
 
 
 
-                <!-- PASAJEROS -->
-
                 <div class="form-group">
 
                   <label for="passengers">
                     Pasajeros *
                   </label>
 
+
                   <select
                     id="passengers"
-                    name="passengers"
                     required
                   >
 
@@ -1967,6 +2973,7 @@
                     >
                       Selecciona
                     </option>
+
 
                     <option value="1">
                       1 pasajero
@@ -2018,18 +3025,16 @@
 
 
 
-                <!-- RECOGIDA -->
-
                 <div class="form-group full">
 
                   <label for="pickup">
                     Lugar de recogida *
                   </label>
 
+
                   <input
                     type="text"
                     id="pickup"
-                    name="pickup"
                     placeholder="Ej. Aeropuerto José Martí"
                     required
                   >
@@ -2038,18 +3043,16 @@
 
 
 
-                <!-- DESTINO -->
-
                 <div class="form-group full">
 
                   <label for="destination">
                     Destino *
                   </label>
 
+
                   <input
                     type="text"
                     id="destination"
-                    name="destination"
                     placeholder="Ej. Hotel en La Habana"
                     required
                   >
@@ -2058,18 +3061,16 @@
 
 
 
-                <!-- INFORMACIÓN EXTRA -->
-
                 <div class="form-group full">
 
                   <label for="message">
                     Información adicional
                   </label>
 
+
                   <textarea
                     id="message"
-                    name="message"
-                    placeholder="Puedes indicarnos detalles adicionales de tu viaje..."
+                    placeholder="¿Necesitas alguna indicación especial? Escríbela aquí..."
                   ></textarea>
 
                 </div>
@@ -2078,8 +3079,6 @@
               </div>
 
 
-
-              <!-- ERROR -->
 
               <div
                 class="error-message"
@@ -2091,9 +3090,8 @@
 
 
 
-              <!-- BOTÓN -->
-
               <div class="form-submit">
+
 
                 <button
                   type="submit"
@@ -2101,15 +3099,17 @@
                   class="btn btn-primary submit-button"
                   disabled
                 >
-                  Completa los datos para solicitar →
+                  Completa los datos para continuar →
                 </button>
 
 
                 <div class="form-note">
                   Al enviar la solicitud se abrirá WhatsApp
-                  con los datos de tu viaje. La solicitud no
-                  confirma automáticamente la reserva.
+                  con la información de tu viaje. La reserva
+                  quedará confirmada únicamente después de
+                  recibir nuestra confirmación.
                 </div>
+
 
               </div>
 
@@ -2117,6 +3117,7 @@
             </form>
 
           </div>
+
 
         </div>
 
@@ -2126,9 +3127,9 @@
 
 
 
-    <!-- ==================================================
-         CTA
-    ================================================== -->
+    <!-- =======================================
+         FINAL CTA
+    ======================================== -->
 
     <section class="cta">
 
@@ -2137,19 +3138,20 @@
 
         <div class="cta-content">
 
+
           <div class="section-label">
-            Tu viaje empieza aquí
+            Tu próximo destino
           </div>
 
 
           <h2>
-            Muévete por Cuba sin preocupaciones.
+            Elige el destino. Nosotros hacemos el resto.
           </h2>
 
 
           <p>
-            Transporte privado, chófer profesional
-            y atención personalizada.
+            Organiza tu transporte antes de viajar y disfruta
+            de un servicio privado pensado para ti.
           </p>
 
 
@@ -2160,19 +3162,21 @@
             Solicitar un viaje →
           </a>
 
+
         </div>
 
       </div>
 
     </section>
 
+
   </main>
 
 
 
-  <!-- ==================================================
+  <!-- =========================================
        FOOTER
-  ================================================== -->
+  ========================================== -->
 
   <footer>
 
@@ -2183,11 +3187,8 @@
 
 
         <div class="footer-brand">
-
           CUBA<span>DRIVE</span>
-
         </div>
-
 
 
         <div class="footer-links">
@@ -2196,13 +3197,16 @@
             Servicios
           </a>
 
+
           <a href="#vehiculo">
             Vehículo
           </a>
 
+
           <a href="#reserva">
             Reservar
           </a>
+
 
           <a
             href="https://wa.me/5358751220"
@@ -2222,7 +3226,7 @@
       <div class="footer-bottom">
 
         <span>
-          © 2026 CubaDrive. Todos los derechos reservados.
+          © 2026 CUBADRIVE. Todos los derechos reservados.
         </span>
 
 
@@ -2239,9 +3243,9 @@
 
 
 
-  <!-- ==================================================
-       WHATSAPP FLOAT
-  ================================================== -->
+  <!-- =========================================
+       FLOATING WHATSAPP
+  ========================================== -->
 
   <a
     href="https://wa.me/5358751220"
@@ -2255,56 +3259,82 @@
 
 
 
-  <!-- ==================================================
+  <!-- =========================================
        JAVASCRIPT
-  ================================================== -->
+  ========================================== -->
 
   <script>
 
-    /* ================================================
-       MENÚ MÓVIL
-    ================================================= */
+
+    /* =========================================
+       MOBILE MENU
+    ========================================== */
 
     const mobileMenu =
-      document.getElementById("mobileMenu");
+      document.getElementById(
+        "mobileMenu"
+      );
+
 
     const navLinks =
-      document.getElementById("navLinks");
+      document.getElementById(
+        "navLinks"
+      );
 
 
-    mobileMenu.addEventListener("click", () => {
+    mobileMenu.addEventListener(
+      "click",
+      () => {
 
-      navLinks.classList.toggle("active");
+        navLinks.classList.toggle(
+          "active"
+        );
 
-    });
+      }
+    );
 
 
     document
-      .querySelectorAll(".nav-links a")
+      .querySelectorAll(
+        ".nav-links a"
+      )
       .forEach(link => {
 
-        link.addEventListener("click", () => {
+        link.addEventListener(
+          "click",
+          () => {
 
-          navLinks.classList.remove("active");
+            navLinks.classList.remove(
+              "active"
+            );
 
-        });
+          }
+        );
 
       });
 
 
 
-    /* ================================================
-       FORMULARIO
-    ================================================= */
+    /* =========================================
+       FORM
+    ========================================== */
 
     const form =
-      document.getElementById("reservationForm");
+      document.getElementById(
+        "reservationForm"
+      );
+
 
     const submitButton =
-      document.getElementById("submitButton");
+      document.getElementById(
+        "submitButton"
+      );
+
 
     const errorMessage =
-      document.getElementById("errorMessage");
+      document.getElementById(
+        "errorMessage"
+      );
 
 
     const requiredFields = [
@@ -2322,43 +3352,56 @@
 
 
 
-    /* ================================================
-       VALIDAR CAMPOS
-    ================================================= */
+    /* =========================================
+       VALIDATE FORM
+    ========================================== */
 
     function validateForm() {
 
       let valid = true;
 
 
-      requiredFields.forEach(id => {
+      requiredFields.forEach(
+        id => {
 
-        const field =
-          document.getElementById(id);
+          const field =
+            document.getElementById(
+              id
+            );
 
 
-        if (!field.value.trim()) {
+          if (
+            !field ||
+            field.value.trim() === ""
+          ) {
 
-          valid = false;
+            valid = false;
+
+          }
 
         }
-
-      });
+      );
 
 
       if (valid) {
 
-        submitButton.disabled = false;
+        submitButton.disabled =
+          false;
+
 
         submitButton.textContent =
           "Solicitar viaje por WhatsApp →";
 
-      } else {
+      }
 
-        submitButton.disabled = true;
+      else {
+
+        submitButton.disabled =
+          true;
+
 
         submitButton.textContent =
-          "Completa los datos para solicitar →";
+          "Completa los datos para continuar →";
 
       }
 
@@ -2369,37 +3412,43 @@
 
 
 
-    /* ================================================
-       DETECTAR CAMBIOS
-    ================================================= */
+    /* =========================================
+       LISTEN TO FORM CHANGES
+    ========================================== */
 
-    requiredFields.forEach(id => {
+    requiredFields.forEach(
+      id => {
 
-      const field =
-        document.getElementById(id);
-
-
-      field.addEventListener(
-        "input",
-        validateForm
-      );
+        const field =
+          document.getElementById(
+            id
+          );
 
 
-      field.addEventListener(
-        "change",
-        validateForm
-      );
-
-    });
+        field.addEventListener(
+          "input",
+          validateForm
+        );
 
 
+        field.addEventListener(
+          "change",
+          validateForm
+        );
 
-    /* ================================================
-       FECHA MÍNIMA
-    ================================================= */
+      }
+    );
+
+
+
+    /* =========================================
+       MINIMUM DATE
+    ========================================== */
 
     const dateInput =
-      document.getElementById("date");
+      document.getElementById(
+        "date"
+      );
 
 
     const today =
@@ -2411,13 +3460,21 @@
 
 
     const month =
-      String(today.getMonth() + 1)
-        .padStart(2, "0");
+      String(
+        today.getMonth() + 1
+      ).padStart(
+        2,
+        "0"
+      );
 
 
     const day =
-      String(today.getDate())
-        .padStart(2, "0");
+      String(
+        today.getDate()
+      ).padStart(
+        2,
+        "0"
+      );
 
 
     dateInput.min =
@@ -2425,9 +3482,9 @@
 
 
 
-    /* ================================================
-       ENVÍO DEL FORMULARIO
-    ================================================= */
+    /* =========================================
+       SUBMIT
+    ========================================== */
 
     form.addEventListener(
       "submit",
@@ -2436,73 +3493,98 @@
         event.preventDefault();
 
 
-        if (!validateForm()) {
+        const valid =
+          validateForm();
 
-          errorMessage.classList.add("active");
+
+        if (!valid) {
+
+          errorMessage.classList.add(
+            "active"
+          );
+
 
           form.reportValidity();
+
 
           return;
 
         }
 
 
-        errorMessage.classList.remove("active");
+        errorMessage.classList.remove(
+          "active"
+        );
 
 
-        /* ---------------------------------------------
-           OBTENER DATOS
-        --------------------------------------------- */
+
+        /* -------------------------------------
+           GET VALUES
+        ------------------------------------- */
 
         const name =
-          document.getElementById("name")
-            .value.trim();
+          document
+            .getElementById("name")
+            .value
+            .trim();
 
 
         const phone =
-          document.getElementById("phone")
-            .value.trim();
+          document
+            .getElementById("phone")
+            .value
+            .trim();
 
 
         const date =
-          document.getElementById("date")
+          document
+            .getElementById("date")
             .value;
 
 
         const time =
-          document.getElementById("time")
+          document
+            .getElementById("time")
             .value;
 
 
         const service =
-          document.getElementById("service")
+          document
+            .getElementById("service")
             .value;
 
 
         const passengers =
-          document.getElementById("passengers")
+          document
+            .getElementById("passengers")
             .value;
 
 
         const pickup =
-          document.getElementById("pickup")
-            .value.trim();
+          document
+            .getElementById("pickup")
+            .value
+            .trim();
 
 
         const destination =
-          document.getElementById("destination")
-            .value.trim();
+          document
+            .getElementById("destination")
+            .value
+            .trim();
 
 
         const message =
-          document.getElementById("message")
-            .value.trim();
+          document
+            .getElementById("message")
+            .value
+            .trim();
 
 
 
-        /* ---------------------------------------------
-           FORMATO DE FECHA
-        --------------------------------------------- */
+        /* -------------------------------------
+           FORMAT DATE
+        ------------------------------------- */
 
         const formattedDate =
           date
@@ -2512,25 +3594,31 @@
 
 
 
-        /* ---------------------------------------------
-           MENSAJE WHATSAPP
-        --------------------------------------------- */
+        /* -------------------------------------
+           WHATSAPP MESSAGE
+        ------------------------------------- */
 
         const whatsappMessage =
 
 `Hola, quiero solicitar un viaje.
 
-👤 Nombre: ${name}
+👤 Nombre:
+${name}
 
-📱 WhatsApp: ${phone}
+📱 WhatsApp:
+${phone}
 
-📅 Fecha del viaje: ${formattedDate}
+📅 Fecha:
+${formattedDate}
 
-⏰ Hora aproximada: ${time}
+⏰ Hora:
+${time}
 
-🚘 Servicio: ${service}
+🚘 Servicio:
+${service}
 
-👥 Pasajeros: ${passengers}
+👥 Pasajeros:
+${passengers}
 
 📍 Lugar de recogida:
 ${pickup}
@@ -2545,38 +3633,43 @@ Quedo atento/a para conocer disponibilidad y precio.`;
 
 
 
-        /* ---------------------------------------------
-           NÚMERO DE WHATSAPP
-        --------------------------------------------- */
+        /* -------------------------------------
+           WHATSAPP NUMBER
+        ------------------------------------- */
 
         const whatsappNumber =
           "5358751220";
 
 
         const whatsappURL =
-          `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          encodeURIComponent(
+            whatsappMessage
+          );
 
 
 
-        /* ---------------------------------------------
-           ABRIR WHATSAPP
-        --------------------------------------------- */
+        /* -------------------------------------
+           OPEN WHATSAPP
+        ------------------------------------- */
 
         window.open(
           whatsappURL,
-          "_blank",
-          "noopener"
+          "_blank"
         );
 
       });
 
 
 
-    /* ================================================
-       VALIDACIÓN INICIAL
-    ================================================= */
+    /* =========================================
+       INITIAL VALIDATION
+    ========================================== */
 
     validateForm();
+
 
   </script>
 
